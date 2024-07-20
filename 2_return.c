@@ -30,7 +30,9 @@ int main(int argc, char *argv[]) {
     exit(-1);
   }
 
-  rc = thrd_join(thread_id, &status);
+  rc = thrd_join(thread_id, &status); // status is the int value that busy_work returns. So &status is a pointer to it. 
+  // This function call tells the program to wait until the thread identified by thread_id terminates.
+  // It ensures that main does not proceed beyond thrd_join until the thread finishes executing busy_work and exits via thrd_exit
   if (rc != thrd_success) {
     printf("ERROR in thrd_join():\n");
     exit(-1);
@@ -39,5 +41,6 @@ int main(int argc, char *argv[]) {
          status);
 
   printf("Main: program completed. Exiting.\n");
-  thrd_exit(0);
+  //thrd_exit(0);
+  return EXIT_SUCCESS; // this is the same as using thrd_exit(0) since we used join. If we delete join and use return, the thread executing busy_work won't terminate.
 }

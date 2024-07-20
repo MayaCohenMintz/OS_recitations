@@ -58,3 +58,4 @@ int main(int argc, char **argv) {
   thrd_exit(0);
 }
 //=================== END OF FILE ====================
+//  The final value of counter (150000000 in this case) reflects the total number of increments performed by all threads combined.

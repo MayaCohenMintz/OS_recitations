@@ -24,6 +24,6 @@ int main(int argc, char *argv[]) {
     exit(EXIT_FAILURE);
   }
 
-  // thrd_exit(EXIT_SUCCESS);
+  //thrd_exit(EXIT_SUCCESS);
   return EXIT_SUCCESS; //<- NOT the same as this
 }

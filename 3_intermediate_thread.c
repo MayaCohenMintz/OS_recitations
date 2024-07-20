@@ -4,6 +4,8 @@
 #include <threads.h>
 #include <unistd.h>
 
+// example of sharing memory (have same virtual memory addresses)
+
 int thread_func(void *thread_param) {
   int *y = (int *)thread_param;
   printf("In thread #%ld\n", thrd_current());

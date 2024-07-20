@@ -97,3 +97,5 @@ int main(int argc, char *argv[]) {
   thrd_exit(0);
 }
 //=================== END OF FILE ====================
+// This code illustrates how to use atomic operations (atomic_int) and mutex (mtx_t) for thread-safe operations and synchronization in a 
+// multithreaded environment, particularly when accessing shared resources like counter.
